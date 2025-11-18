@@ -1,0 +1,27 @@
+/* Meng-highlight menu Lokasi RVM jika di halaman lokasi_RVM */
+.nav-menu a.active {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+/* Responsive Google Maps iframe (jika pakai embed maps) */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin-bottom: 1.5rem;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border:0;
+}
+
+/* Bisa pakai untuk badge custom status */
+.badge.maintenance {
+  background: #ffb200;
+}

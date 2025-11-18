@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contoh Barcode Variatif QR</title>
+  <link rel="stylesheet" href="barcode.css" />
+  <!-- Library QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="barcode-container">
+    <div class="barcode-header">
+      <h2>Coba Scan QR Code!</h2>
+      <p class="desc">
+        Contoh QR variatif, cocok untuk pembayaran QRIS (GoPay, OVO, DANA, dll)
+      </p>
+    </div>
+    <div class="barcode-frame" id="barcode-frame">
+      <div id="qrcode"></div>
+      <div class="barcode-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/QRIS_logo.svg" alt="QRIS" />
+      </div>
+    </div>
+    <div class="barcode-label">
+      <span class="badge-green">QRIS</span>
+      <span class="badge-orange">Ready</span>
+    </div>
+    <div class="barcode-text" id="barcode-text"></div>
+    <button class="btn-download" id="btn-download">Download QR</button>
+  </div>
+
+  <script>
+    // Data yang ingin di encode. Untuk demo, ini bisa berupa string QRIS, nomor telepon, dsb.
+    var data = "00020101021126690016ID.CO.QRIS.WWW01189360091500813403180240503";
+    document.getElementById("barcode-text").innerText = data;
+
+    // QRCode
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: data,
+      width: 220,
+      height: 220,
+      colorDark : "#1abc9c",
+      colorLight : "#f8fafd",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+
+    // Button Download png
+    document.getElementById('btn-download').addEventListener('click', function() {
+      var img = document.querySelector('#qrcode img');
+      // fallback for SVG fallback
+      if(!img) {
+        img = document.querySelector('#qrcode canvas');
+        var url = img.toDataURL("image/png");
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = "barcode-qr.png";
+        a.click();
+      } else {
+        var a = document.createElement('a');
+        a.href = img.src;
+        a.download = "barcode-qr.png";
+        a.click();
+      }
+    });
+  </script>
+</body>
+</html>

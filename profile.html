@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Rupiah Network</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" href="logo eco.png"  type="image/png"> 
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <img src="gigachad.png" class="profile-header" alt="Profile Photo">
+            <div>
+                <div class="username">Your Name</div>
+                <div class="userhandle">@NameYour</div>
+            </div>
+        </div>
+        <div class="header-center"></div>
+        <div class="header-right">
+            <span class="header-title">Eco-Rupiah Network</span>
+            <div class="logo">
+        <span class="logo">
+          <img src="logo eco.png" alt="Eco Rupiah Logo" width="46" height="46" />
+        </span>
+        </div>
+            </span>
+        </div>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <button id="goHomeBtn" type="button" class="menu-btn">Home</button>
+            <button id="goRewardsBtn" type="button" class="menu-btn">Rewards</button>
+            <button id="goQuestBtn" type="button" class="menu-btn">Quest</button>
+            <button id="goProductBtn" type="button" class="menu-btn">Lokasi RVM</button>
+            <button id="goLeaderboardBtn" type="button" class="menu-btn">Leaderboard</button>
+        </aside>
+        <section class="content">
+            <div class="card profile-card">
+                <img src="gigachad.png" class="profile-image" alt="Profile Photo">
+                <div class="profile-info">
+                    <div class="profile-name">Your Name</div>
+                    <div class="profile-email">@youremail.com</div>
+                </div>
+                <button class="edit-btn">Edit Profile</button>
+            </div>
+            <div class="card progress-card">
+                <div class="progress-title">Monthly Progress</div>
+                <div class="progress-circle">
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="#DDDDDD" stroke-width="10" fill="none"/>
+                        <circle cx="50" cy="50" r="40" stroke="#21863B" stroke-width="10" fill="none"
+                            stroke-dasharray="251.2" stroke-dashoffset="185.88" />
+                        <text x="50%" y="54%" text-anchor="middle" font-size="22" fill="#333" font-family="Arial" dy=".3em">26%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card leaderboard-card">
+                <div class="leaderboard-title">Leaderboard</div>
+                <div class="leaderboard-box"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // FUNGSI UNTUK SEMUA BUTTON DITAMBAHKAN DI SINI
+        
+        document.getElementById('goHomeBtn').addEventListener('click', function () {
+            window.location.href = 'dashboard.html'; 
+        });
+
+        document.getElementById('goRewardsBtn').addEventListener('click', function () {
+            window.location.href = 'rewards.html'; 
+        });
+
+        document.getElementById('goQuestBtn').addEventListener('click', function () {
+            window.location.href = 'quest.html'; 
+        });
+
+        document.getElementById('goProductBtn').addEventListener('click', function () {
+            window.location.href = 'lokasi_RVM.html'; 
+        });
+
+        document.getElementById('goLeaderboardBtn').addEventListener('click', function () {
+            window.location.href = 'leaderboard.html'; 
+        });
+
+    </script>
+</body>
+</html>

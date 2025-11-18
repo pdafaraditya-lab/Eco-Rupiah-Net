@@ -1,0 +1,132 @@
+  <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Rupiah Network</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="icon" href="logo eco.png"  type="image/png"> 
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Eco Rupiah <span>Network</span></div>
+    <nav class="nav-menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="lokasi_RVM.html">Lokasi RVM</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="leaderboard.html">Leaderboard</a>
+    </nav>
+    <div class="header-right">
+      <button class="balance-btn">
+        <svg class="icon-wallet" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ff9800"/></svg>
+        12,450
+      </button>
+      <button class="notif-btn">
+        <svg class="icon-bell" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e91e63"/></svg>
+        <span class="notif-count">2</span>
+      </button>
+      <div class="profile-icon"></div>
+    </div>
+  </header>
+
+  <section class="leaderboard container">
+    <h2>Leaderboard Mingguan</h2>
+    <div class="top-three">
+      <div class="leader gold">
+        <span>1</span>
+        <div>EcoHero_88</div>
+        <div>45,200 pts</div>
+      </div>
+      <div class="leader silver">
+        <span>2</span>
+        <div>GreenWarrior</div>
+        <div>42,150 pts</div>
+      </div>
+      <div class="leader bronze">
+        <span>3</span>
+        <div>RecycleMaster</div>
+        <div>38,900 pts</div>
+      </div>
+    </div>
+    <ul class="full-leaderboard">
+      <li>#4 PlanetSaver - 35,600 pts</li>
+      <li>#5 EcoChampion - 33,470 pts</li>
+    </ul>
+  </section>
+
+  <section class="ranking container">
+    <h2>Ranking Anda</h2>
+    <div class="ranking-card">
+      <p>#12</p>
+      <p>Level 8 - Eco Master</p>
+      <p>Total Poin: 12,450</p>
+      <p>Ranking Mingguan: 248</p>
+      <p>Rank in Week: 12</p>
+    </div>
+    <div class="ranking-bonus">
+      <p>Untuk naik ke #1 <span>+180 pts</span></p>
+      <p>Untuk masuk Top 10 <span>+950 pts</span></p>
+    </div>
+  </section>
+
+  <section class="activity-log container">
+    <h2>Aktivitas Terbaru</h2>
+    <ul>
+      <li>Berhasil daur ulang 5 botol plastik <span>+250 Pts</span></li>
+      <li>Menonton Iklan Eco Products <span>+150 Pts</span></li>
+      <li>Menyelesaikan misi harian <span>+300 Pts</span></li>
+      <li>Naik ke Level 8! <span>+500 Pts</span></li>
+      <li>Daur ulang di RVM taman Menteng <span>+200 Pts</span></li>
+      <li>Unlock achievement “Eco Warrior” <span>+100 Pts</span></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top container">
+      <div class="footer-info">
+        <h3>Eco-Rupiah</h3>
+        <p>Platform gamifikasi reverse vending machine untuk monetisasi konten digital dan insentif daur ulang.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#">Cara Kerja</a></li>
+            <li><a href="#">Lokasi RVM</a></li>
+            <li><a href="#">Program Rewards</a></li>
+            <li><a href="#">Leaderboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Dukungan</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Panduan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Dapatkan update terbaru tentang program dan rewards</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Anda" />
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2023 Eco-Rupiah Network. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><svg width="20" height="20"><circle cx="10" cy="10" r="9" fill="#3b5998"/></svg></a>
+        <a href="#"><svg width="20" height="20"><circle cx="10" cy="10" r="9" fill="#00acee"/></svg></a>
+        <a href="#"><svg width="20" height="20"><circle cx="10" cy="10" r="9" fill="#0077b5"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="leaderboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F8F8F8;
+}
+.main-header {
+    width: 100%;
+    background: #008080;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 120px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 30px;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+.profile-header {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.username {
+    color: white;
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.userhandle {
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+}
+.header-center {
+    flex: 1;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-title {
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+}
+.header-icon {
+    margin-left: 18px;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+.logo {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px; /* Membuat logo mirip dengan desain PNG */
+  display: block;
+  object-fit: cover;
+}
+.sidebar {
+    background: #F1F1F1;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 80vh;
+    border-right: 2px solid #E0E0E0;
+}
+.menu-btn {
+    background: #008080;
+    color: white;
+    font-size: 1.25em;
+    font-weight: 500;
+    width: 160px;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    border: 2px solid #008080;
+    box-shadow: 2px 2px 7px rgba(60,60,60,0.08);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.menu-btn:last-child {
+    margin-bottom: 0;
+}
+.menu-btn:hover, .edit-btn:hover {
+    background: #006557;
+}
+.content {
+    display: grid;
+    grid-template-areas:
+      "profile-card progress-card"
+      "profile-card leaderboard-card";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    padding: 48px 45px;
+    flex: 2;
+}
+.card {
+    background: #F4F4F4;
+    border-radius: 20px;
+    box-shadow: 3px 4px 13px #ccc7;
+    padding: 36px 28px;
+    min-width: 310px;
+}
+
+.profile-card {
+    grid-area: profile-card;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 350px;
+}
+.profile-image {
+    width: 145px;
+    height: 145px;
+    border-radius: 18px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.profile-name {
+    font-size: 1.32em;
+    font-weight: 550;
+    color: #242424;
+}
+.profile-email {
+    color: #666;
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 8px;
+}
+.edit-btn {
+    background: #008080;
+    color: white;
+    font-size: 1.18em;
+    border: none;
+    padding: 11px 0;
+    width: 260px;
+    border-radius: 14px;
+    box-shadow: 3px 3px 9px rgba(60,60,60,0.1);
+    margin-top: 15px;
+    cursor: pointer;
+}
+.progress-card {
+    grid-area: progress-card;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.progress-title {
+    font-size: 1.35em;
+    font-weight: 500;
+    color: #242424;
+    margin-bottom: 11px;
+}
+.progress-circle {
+    width: 106px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.leaderboard-card {
+    grid-area: leaderboard-card;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.leaderboard-title {
+    font-size: 1.35em;
+    font-weight: 500;
+    color: #242424;
+    margin-bottom: 16px;
+}
+.leaderboard-box {
+    width: 210px;
+    height: 90px;
+    border-radius: 13px;
+    background: #cccccc80;
+    margin-bottom: 6px;
+}
+@media (max-width: 950px) {
+    .content {
+        grid-template-areas:
+          "profile-card"
+          "progress-card"
+          "leaderboard-card";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .card {
+        min-width: unset;
+        width: 90vw;
+        margin-bottom: 26px;
+    }
+    .sidebar {
+        width: 100px;
+        padding: 30px 0;
+    }
+}

@@ -1,0 +1,211 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.left, .right {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.left {
+  background: #008080;
+  color: #fff;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px 0 0 70px;
+  position: relative;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px; /* Membuat logo mirip dengan desain PNG */
+  display: block;
+  object-fit: cover;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.welcome {
+  margin-top: 140px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.welcome h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+}
+
+.welcome p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.sign-in-btn {
+  margin-top: 0;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 16px 70px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sign-in-btn:hover {
+  background: #fff;
+  color: #008080;
+}
+
+/* RIGHT SIDE */
+.right {
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.create-account {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #008080;
+  margin-bottom: 16px;
+  margin-top: 0;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.social-row {
+  display: flex;
+  gap: 44px;
+  margin-bottom: 28px;
+  justify-content: center;
+}
+
+.icon-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.3px solid #008080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .15s;
+  padding: 0;
+}
+
+.icon-btn img {
+  width: 28px; height: 28px;
+  filter: invert(30%) sepia(82%) saturate(800%) hue-rotate(80deg) brightness(0.7) contrast(0.9);
+}
+
+.icon-btn:hover {
+  background: #e3f6ee;
+}
+
+.or-label {
+  font-size: 1.19rem;
+  margin-bottom: 22px;
+  color: #222;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 360px;
+}
+
+.signup-form input {
+  background: #eee;
+  border: none;
+  outline: none;
+  font-size: 1.14rem;
+  padding: 18px 24px;
+  border-radius: 12px;
+  color: #444;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: outline .15s;
+}
+
+.signup-form input:focus {
+  outline: 2px solid #008080;
+}
+
+.signup-form input::placeholder {
+  color: #bdbdbd;
+}
+
+.sign-up-btn {
+  background: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 18px 0;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 18px;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  transition: background .2s, color .2s;
+}
+
+.sign-up-btn:hover {
+  background: #006557;
+}
+
+/* RESPONSIVE (HP MODE) */
+@media (max-width: 900px) {
+  .container { flex-direction: column; min-height: unset; }
+  .left, .right { width: 100%; min-height: 400px; height: auto; }
+  .left { padding: 30px 24px 10px 24px; align-items: center; }
+  .brand { font-size: 1.2rem; }
+  .welcome { margin-top: 34px; align-items: center; }
+  .right { padding: 40px 10px; }
+  .signup-form { width: 100%; max-width: 350px; }
+  .create-account { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .signup-form { max-width: 100%; width: 100%; }
+  .create-account { font-size: 1.4rem;}
+}

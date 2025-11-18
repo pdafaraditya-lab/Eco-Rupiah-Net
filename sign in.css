@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* LEFT (Sign In) */
+.left {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+.signin-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #008080;
+  margin-bottom: 34px;
+  margin-top: 0;
+  text-align: center;
+}
+.signin-social-row {
+  display: flex;
+  gap: 38px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.icon-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1.3px solid #008080;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.13s;
+  padding: 0;
+}
+.icon-btn img {
+  width: 28px;
+  height: 28px;
+  filter: invert(30%) sepia(82%) saturate(800%) hue-rotate(80deg) brightness(0.7) contrast(0.9);
+}
+.icon-btn:hover {
+  background: #e3f6ee;
+}
+.or-label {
+  font-size: 1.28rem;
+  color: #191919;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  width: 370px;
+  max-width: 90vw;
+}
+.signin-form input {
+  background: #F2F2F2;
+  border: none;
+  outline: none;
+  font-size: 1.20rem;
+  padding: 20px 28px;
+  border-radius: 12px;
+  color: #444;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: outline .13s;
+}
+.signin-form input:focus {
+  outline: 2px solid #008080;
+}
+.signin-form input::placeholder {
+  color: #bdbdbd;
+}
+.forgot-link {
+  text-align: left;
+  font-size: 1.13rem;
+  margin-bottom: 10px;
+  color: #191919;
+  text-decoration: none;
+  margin-top: 0;
+  margin-left: 9px;
+}
+.forgot-link:hover {
+  text-decoration: underline;
+}
+.signin-btn {
+  background: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 18px 0;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 6px;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  transition: background .16s;
+}
+.signin-btn:hover {
+  background: #008080;
+}
+
+/* RIGHT (Panel) */
+.right {
+  flex: 1;
+  background: #008080;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 100vh;
+  padding: 0;
+}
+.brand-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  padding: 44px 60px 0 0;
+}
+.brand {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: .5px;
+}
+.logo {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px; /* Membuat logo mirip dengan desain PNG */
+  display: block;
+  object-fit: cover;
+}
+.welcome-section {
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  padding-right: 120px;
+}
+.welcome-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.desc-text {
+  font-size: 1.27rem;
+  font-weight: 400;
+  margin: 28px 0 36px 0;
+  line-height: 1.36;
+  color: #fff;
+  text-align: right;
+}
+.signup-btn {
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 16px 85px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.signup-btn:hover {
+  background: #fff;
+  color: #008080;
+}
+
+/* BOTTOM RIGHT CORNER ORNAMENT */
+.bottom-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 0 0 0 35px;
+}
+
+/* RESPONSIVE STYLE */
+@media (max-width: 1100px) {
+  .welcome-section { padding-right: 55px; margin-top: 110px; }
+  .signin-form { width: 97vw; max-width: 360px; }
+  .brand-row { padding-right: 20px; }
+}
+@media (max-width: 900px) {
+  .container { flex-direction: column; min-height: unset;}
+  .left, .right { width: 100%; min-height: 370px; }
+  .right { align-items: center; }
+  .welcome-section { align-items: center; padding-right: 0; }
+  .brand-row { justify-content: center; }
+}
